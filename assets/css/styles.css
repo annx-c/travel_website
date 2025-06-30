@@ -278,7 +278,7 @@ img {
   width: 100%;
 }
 
-.home_card-shadow{
+.shadow{
   position: absolute;
   width: 100%;
   height: 100%;
@@ -324,11 +324,78 @@ img {
   border-radius: 50px;
 }
 /*=============== ABOUT ===============*/
+.about_container{
+  row-gap: 3rem;
+}
 
+.about_data{
+  text-align: center;
+}
+
+.section_title{
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.about_description{
+  margin-bottom: 2rem;
+}
+
+.about_image{
+  position: relative;
+  justify-self: center;
+  overflow: hidden;
+}
+
+.about_img{
+  width: 300px;
+  height: 300px;
+  transition: transform .4s;
+}
+
+.about_image:hover .about_img{
+  transform: scale(1.2);
+}
 
 /*=============== POPULAR ===============*/
+.popular_container{
+  padding-top: 1.5rem;
+  grid-template-columns: 240px;
+  justify-content: center;
+  row-gap: 2.5rem;
+}
 
+.popular_image{
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
 
+.popular_img{
+  transition: transform .4s;
+}
+
+.popular_title{
+  font-size: var(--h3-font-size);
+  margin-bottom: .5rem;
+}
+
+.popular_location{
+  display: inline-flex;
+  align-items: center;
+  column-gap: .25rem;
+  font-size: var(--small-font-size);
+  font-family: var(--second-font);
+  font-weight: 500;
+}
+
+.popular_location i{
+  font-size: 1rem;
+}
+
+.popular_image:hover .popular_img{
+  transform: scale(1.2);
+}
 /*=============== EXPLORE ===============*/
 
 
