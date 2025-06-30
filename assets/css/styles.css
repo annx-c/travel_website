@@ -195,17 +195,134 @@ img {
 }
 
 /* Add blur to header */
-
+.blur-header::after{
+  content:'';
+  position: absolute;
+  width: 1000%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, .3);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px); /*for safari - para safari*/
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 
 /* Active link */
 
 
 /*=============== HOME ===============*/
+.home{
+  position: relative;
+}
 
+.home_bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 750px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.home_shadow{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  background: linear-gradient(180deg,
+              hsla(0, 0%, 0%, 0) 58%,
+              hsl(0, 0%, 0%) 78%);
+}
+
+.home_container{
+  position: relative;
+  padding-top: 3rem;
+  row-gap: 3rem;
+}
+
+.home_data{
+  text-align: center;
+}
+
+.home_subtitle{
+  font-size: var(--h3-font-size);
+  margin-bottom: .5rem;
+}
+
+.home_title{
+  font-size: var(--biggest-font-size);
+  margin-bottom: 1rem;
+}
+
+.home_description{
+  margin-bottom: 2rem;
+  color: var(--title-color);
+}
+
+.home_cards{
+  grid-template-columns: 330px;
+  justify-content: center;
+}
+
+.home_card{
+  position: relative;
+  overflow: hidden;
+}
+
+.home_card-img{
+  transition: transform .4s;
+  height: 230px;
+  width: 100%;
+}
+
+.home_card-shadow{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg,
+              hsla(0, 0%, 0%, 0) 50%,
+              hsl(0, 0%, 0%) 125%);
+}
+
+.home_card-title{
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  font-size: var(--h3-font-size);
+  z-index: 1;
+}
+
+.home_card:hover .home_card-img{
+  transform: scale(1.2);
+}
 
 /*=============== BUTTON ===============*/
 
+.button{
+  background-color: hsla(0, 0%, 100%, .2);
+  padding: 1.25rem 1.5rem;
+  color: var(--title-color);
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  font-family: var(--second-font);
+  font-weight: var(--font-semi-bold);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px); /*for safari - para safari*/
+  transition: border-radius 1s ease, background-color 0.5s ease;
+  border: 1px solid transparent;
+}
 
+.button:hover{
+  background-color: transparent;
+  border: 1px solid var(--title-color);
+  border-radius: 50px;
+}
 /*=============== ABOUT ===============*/
 
 

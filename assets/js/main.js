@@ -22,20 +22,20 @@ const navLink = document.querySelectorAll('.nav_link')
 
 const linkAction = () =>{
     const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav_link, we remove the show-menu class
+    // When we click on each nav_link, we remove the show-menu class - Cuando hacemos clic en cada nav_link, eliminamos la clase show-menu 
     navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-/*=============== CHANGE BACKGROUND HEADER ===============*/
-const scrollHeader = () =>{
-    const header = document.getElementById('header')
-    // Add a class if the bottom offset is greater than 50 of the viewport
-    this.scrollY >= 50 ? header.classList.add('scroll-header') 
-                       : header.classList.remove('scroll-header')
-}
-window.addEventListener('scroll', scrollHeader)
 
+/*=============== CHANGE BACKGROUND HEADER ===============*/
+const blurHeader = () =>{
+    const header = document.getElementById('header')
+    // Add a class if the bottom offset is greater than 50 of the viewport - Añade una clase si el desplazamiento inferior es mayor que 50 del viewport
+    this.scrollY >= 50 ? header.classList.add('blur-header') 
+                       : header.classList.remove('blur-header')
+}
+window.addEventListener('scroll', blurHeader)
 
 /*=============== ADD BLUR TO HEADER ===============*/
 
